@@ -1,10 +1,14 @@
 # Apple Music CLI Player
 
-*Tested on macOS 12 & 13 (likely to work on macOS 10.15, 11). **Can be called with the system default zsh.** I recommend aliasing am.sh to `alias am=zsh path/to/am.sh`, or moving its three individual functions into your .zshrc.*
+> Modified version of [Apple Music CLI Player](https://github.com/mcthomas/Apple-Music-CLI-Player), display changes and made compatible with Bash.
+>
+> _Original from [Matt Thomas](https://github.com/mcthomas)._
+
+*Tested on macOS 12 & 13 (likely to work on macOS 10.15, 11). **Can be called with the system default zsh.** I recommend aliasing am.sh to `alias am=bash path/to/am.sh`, or moving its three individual functions into your .zshrc.*
 
 **Goal:** Provide a simple command-line interface to listing out, playing songs from, and utilizing controls for Music.app.  I decided against using a library such as ncurses to build a full TUI application, as I think it is preferable to interface via quick commands and a light "widget".
 
-<img src="np.png" width="800"/>
+![Apple Music CLI Player](./np.png)
 
 ## Now Playing (np)
 
@@ -19,7 +23,7 @@ Configuration:
 
 Usage (aliased): `am np`
 
-Usage (not aliased): `zsh am.sh np`
+Usage (not aliased): `bash am.sh np`
 ```
 np                    Open the "Now Playing" TUI widget.
                       (Music.app track must be actively
@@ -53,7 +57,7 @@ List out all song groupings of a specific type or all songs of a specific song g
 
 Usage (aliased): `am list [-grouping] [name]`
 
-Usage (not aliased): `zsh am.sh list [-grouping] [name]`
+Usage (not aliased): `bash am.sh list [-grouping] [name]`
 ```
 list -s               List all songs in your library.
 list -r               List all records.
@@ -122,7 +126,7 @@ if [ $1 = "atv" ]
   fi
 fi
 ```
-Example: `zsh ap.sh atv`
+Example: `bash ap.sh atv`
 
 ### Known Problems
 
